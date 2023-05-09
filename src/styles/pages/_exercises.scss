@@ -1,0 +1,57 @@
+.list-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+    overflow-y: auto;
+    max-height: 800px;
+    animation: slideInLeft 1s;
+    .input-cont {
+        width: 100%;
+        height: 100%;
+        border-bottom: 2px solid var(--base-color, $base-color);
+        display: flex;
+        justify-content: space-between;
+        select {
+            height: 40px;
+            width: 120px;
+        }
+        .input-box {
+            width: 500px;
+            height: 40px;
+            position:relative;
+            margin-bottom: 30px;
+            #search {
+                width: 100%;
+            }
+        }
+        #lupa {
+            position: absolute;
+            left: 94%;
+            top: 30%;
+            height: 15px;
+            width: 15px;
+            color: rgba(0, 0, 0, 0.349);
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .list-box {
+        padding: 20px;
+        padding-bottom: 80px;
+        .input-cont {
+            select {
+                width: 80px;
+                font-size: 10px;
+            }
+            .input-box {
+                width: 250px;
+            }
+            #lupa {
+                left: 92%;
+            }
+        }
+    }
+}

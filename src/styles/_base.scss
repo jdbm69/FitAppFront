@@ -1,0 +1,94 @@
+@import './variables';
+
+.app-box {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    input {
+        width: 400px;
+        height: 40px;
+        font-size: 15px;
+        padding-left: 10px;
+        border: 1px solid rgba(0, 0, 0, 0.349);
+        transition: 200ms linear 25ms;
+        color: $black-color;
+    }
+    select {
+        font-size: 15px;
+        padding-left: 2px;
+        border: 1px solid rgba(0, 0, 0, 0.349);
+        transition: 200ms linear 25ms;
+        color: $black-color;
+    }
+    input:focus, select:focus {
+        outline: none;
+        border: 2px solid var(--base-color, $base-color);
+    }
+    input:hover, select:hover {
+        box-shadow: 0.5px 0.5px 5px 0.5px var(--base-color, $base-color);
+    }
+    ::placeholder {
+        color: rgba(0, 0, 0, 0.349);
+    }
+    button, .submit-button {
+        background-color: var(--base-color, $base-color);
+        border-radius: 10px;
+        color: white;
+        border: none;
+        transition: 200ms linear 50ms;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    button:hover, .submit-button:hover {
+        cursor: pointer;
+        background-color: var(--base-color-darkness, $base-color-darkness);
+    }
+    .exit-button {
+        background-color: rgba(187, 0, 0, 0.712);
+        padding: 5px;
+    }
+    .exit-button:hover {
+        background-color: rgba(158, 0, 0, 0.712);
+    }
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: var(--base-color, $base-color);
+        border-radius: 20px;
+    }
+    ::-webkit-scrollbar-thumb:active {
+        background-color: var(--base-color, $base-color);
+    }
+    ::-webkit-scrollbar-track-piece {
+        background-color: rgba(0, 0, 0, 0.096);
+    }
+    ::-webkit-scrollbar:vertical {
+        width: 10px;
+    }
+    .menu-button {
+        background-color: inherit;
+        color: black;
+        padding: 5px 10px;
+    }
+    .menu-button:hover {
+        color: var(--base-color, $base-color);
+        background-color: rgba(0, 0, 0, 0.03);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .app-box {
+        input {
+            font-size: 13px;
+            padding-left: 8px;
+        }
+        select, button, .submit-button {
+            font-size: 13px;
+        }
+        ::-webkit-scrollbar:vertical {
+            width: 7px;
+        }
+    }
+}

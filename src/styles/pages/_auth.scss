@@ -1,0 +1,103 @@
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-size: 15px;
+    color: $black-color;
+    .auth-box {
+        height: 700px;
+        width: 500px;
+        background-color: white;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        gap: 30px;
+        border-radius: 15px;
+        box-shadow: 3px 3px 40px 10px rgba(0, 0, 0, 0.2);
+        animation: bounceInDown 1s;
+        margin-top: 100px;
+        .title-box {
+            animation: backInUp 1s;
+            h1 {
+                letter-spacing: 8px;
+                font-size: 40px;
+                font-family: 'Russo One', sans-serif;
+            }    
+            .icon {
+                color: var(--base-color, $base-color);
+                margin-left: 5px;
+                margin-right: 11px;
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .ip, .ipconfirm {
+                width: 400px;
+                height: 40px;
+                position:relative;
+                z-index: 10;
+            }
+            .bi {
+                position: absolute;
+                left: 93%;
+                top: 25%;
+                height: 20px;
+                width: 20px;
+                color: rgba(0, 0, 0, 0.349);
+                transition: 200ms linear 25ms;
+            }
+            .bi:hover {
+                color: var(--base-color, $base-color);
+                cursor: pointer;
+            }
+        }
+        a {
+            color: var(--base-color, $base-color);
+        }
+        a:hover {
+            cursor: pointer;
+            color: var(--base-color-darkness, $base-color-darkness);
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .auth-container {
+        .auth-box {
+            height: 600px;
+            width: 90%;
+            gap: 20px;
+            font-size: 14px;
+            .title-box {
+                animation: backInUp 1s;
+                h1 {
+                    letter-spacing: 6px;
+                    font-size: 30px;
+                }    
+                .icon {
+                    margin-left: 3px;
+                    margin-right: 7px;
+                }
+            }
+            form {
+                width: 90%;
+                input {
+                    width: 100%;
+                }
+                .ip, .ipconfirm {
+                    width: 100%;
+                }
+                .bi {
+                    left: 91%;
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+    }
+}

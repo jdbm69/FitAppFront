@@ -1,0 +1,26 @@
+.home-box {
+    animation: slideInUp 1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    img {
+        width: 600px;
+        height: 400px
+    }
+    p {
+        color: var(--base-color-darkness, $base-color-darkness);
+        font-size: 30px;
+        letter-spacing: 4px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .home-box {
+        img {
+            width: 90%;
+            height: 300px
+        }
+    }
+}

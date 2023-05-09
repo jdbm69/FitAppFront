@@ -1,0 +1,154 @@
+.modal-dos-cont {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    .modal-dos-box {
+        width: 500px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        animation: zoomIn 1s;
+        .exit-container-dos {
+            width: 400px;
+            display: flex;
+            justify-content: space-between;
+            .exit-button {
+                height: 40px;
+            }
+        }
+        .exercise-name {
+            color: var(--base-color, $base-color);
+            text-transform: uppercase;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .radio {
+                display: flex;
+                justify-content: center;
+                .typeof-box {
+                    display: flex;
+                    gap: 10px;
+                    p {
+                        color: $black-color;
+                        font-size: 15px;
+                    }
+                    .switch {
+                        position: relative;
+                        display: inline-block;
+                        width: 35px;
+                        height: 18px;
+                        input {
+                            opacity: 0;
+                            width: 0;
+                            height: 0;
+                        }
+                        .slider {
+                            position: absolute;
+                            cursor: pointer;
+                            top: 0;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            background-color: var(--base-color, $base-color);
+                            -webkit-transition: .4s;
+                            transition: .4s;
+                            animation: lang 1.5s 3 linear;
+                            animation-delay: 3.5s;
+                        }
+                        .slider:before {
+                            position: absolute;
+                            content: "";
+                            height: 18px;
+                            width: 18px;
+                            left: 0;
+                            bottom: 0;
+                            background-color: rgb(238, 238, 238);
+                            -webkit-transition: .4s;
+                            transition: .4s;
+                            margin-left: 1px;
+                        }
+                        input:checked + .slider {
+                            background-color: var(--base-color, $base-color);
+                        }
+                          
+                        input:checked + .slider:before {
+                            -webkit-transform: translateX(15px);
+                            -ms-transform: translateX(15px);
+                            transform: translateX(15px);
+                        }
+                          
+                        .slider.round {
+                            border-radius: 34px;
+                        }
+                          
+                        .slider.round:before {
+                            border-radius: 50%;
+                        }
+                      }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-dos-cont {
+        .modal-dos-box {
+            width: 90%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            .exit-container-dos {
+                width: 90%;
+                .exit-button {
+                    height: 35px;
+                    width: 25px;
+                }
+            }
+            .exercise-name {
+                font-size: 14px;
+            }
+            form {
+                width: 90%;
+                input {
+                    width: 100%;
+                }
+                .radio {
+                    .typeof-box {
+                        gap: 5px;
+                        p {
+                            font-size: 12px;
+                        }
+                        .switch {
+                            width: 30px;
+                            height: 15px;
+                            .slider:before {
+                                height: 15px;
+                                width: 15px;
+                            }
+                            input:checked + .slider:before {
+                                -webkit-transform: translateX(13px);
+                                -ms-transform: translateX(13px);
+                                transform: translateX(13px);
+                            }
+                          }
+                    }
+                }
+            }
+        }
+    }
+}

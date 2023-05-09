@@ -1,0 +1,27 @@
+//base
+@import './base';
+
+//variables
+@import './variables';
+
+//pages
+@import './pages/auth';
+@import './pages/routine';
+@import './pages/exercises';
+@import './pages/records';
+@import './pages/progress';
+@import './pages/home';
+
+//components
+@import './components/navBar';
+@import './components/navBarDos';
+@import './components/footer';
+@import './components/modal';
+@import './components/language';
+@import './components/modalDos';
+@import './components/exercise';
+@import './components/modalCuatro';
+@import './components/modalCinco';
+@import './components/profileMenu';
+@import './components/modalSeis';
+@import './components/lineChart';

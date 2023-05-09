@@ -1,0 +1,126 @@
+.routine-box {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    color: $black-color;
+    overflow-y: auto;
+    height: 800px;
+    gap: 10px;
+    animation: slideInLeft 1s;
+    .routine-title {
+        display: flex;
+        justify-content: space-between;
+        font-size: 25px;
+        border-bottom: 2px solid var(--base-color, $base-color);
+        padding-bottom: 20px;
+        .add {
+            text-transform: capitalize;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            font-size: 15px;
+            padding: 0 20px;
+            height: 40px;
+        }
+        button {
+            padding: 5px 10px;
+            margin-top: 10px;
+        }
+        p {
+            padding-top: 20px;
+        }
+        .title-date {
+            display: flex;
+            flex-direction: column;
+            line-height: 15px;
+            .date {
+                font-size: 14px;
+                color: var(--base-color-darkness, $base-color-darkness);
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+    .routine-item {
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        button {
+            padding: 5px 10px;
+        }
+        .item-title {
+            font-size: 15px;
+            width: 420px;
+            height: 50px;
+        }
+        .item-options {
+            display: flex;
+            gap: 10px;
+        }
+        .add-button {
+            text-transform: capitalize;
+            display: flex;
+            gap: 5px;
+            align-items: center;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+    }
+    .msg {
+        padding-top: 10px;
+        padding-left: 10px;
+        color: var(--base-color, $base-color);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .routine-box {
+        padding: 10px;
+        height: 700px;
+        .routine-title {
+            font-size: 20px;
+            .add {
+                gap: 10px;
+                font-size: 12px;
+                padding: 0 20px;
+                height: 30px;
+                svg {
+                    height: 18px;
+                    width: 18px;
+                }
+            }
+            p {
+                padding-top: 20px;
+            }
+            .title-date {
+                line-height: 10px;
+                .date {
+                    font-size: 12px;
+                }
+            }
+        }
+        .routine-item {
+            padding-top: 20px;
+            display: flex;
+            gap: 10px;
+            font-size: 12px;
+            button {
+                height: 50px;
+            }
+            .item-title {
+                font-size: 12px;
+                width: 100%;
+                height: 50px;
+            }
+            .add-button {
+                gap: 5px;
+            }
+        }
+        .msg {
+            padding-top: 5px;
+            padding-left: 5px;
+            font-size: 12px;
+        }
+    }
+}

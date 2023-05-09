@@ -1,0 +1,116 @@
+.modal-cont {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .modal-box-4 {
+        width: 600px;
+        background-color: white;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        animation: zoomIn 1s;
+        .exit-container-4 {
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 30px;
+            .exercise-name {
+                color: var(--base-color, $base-color);
+                text-transform: uppercase;
+            }
+        }
+        .series {
+            display: flex;
+            justify-content: space-around;
+            width: 520px;
+            .modal-info {
+                font-size: 18px;
+                letter-spacing: 1px;
+                box-shadow: 0px 15px 10px -12px rgba(0,0,0,0.75);
+                border-bottom: 2px solidvar(--base-color, $base-color);
+                border-left: 1px solid var(--base-color, $base-color);
+                height: 40px;
+                .serie, .reps, .weight {
+                    padding-left: 20px;
+                    padding-right: 20px;
+                }
+                .serie {
+                    background-color: var(--base-color, $base-color);
+                    height: 40px;
+                    border-top-right-radius: 10px;
+                    color: white;
+                    padding-bottom: 13px;
+                    padding-top: 2px;
+                }
+                .weight {
+                    color: var(--base-color-darkness, $base-color-darkness);
+                }
+            }
+            .options {
+                display: flex;
+                gap: 10px;
+                button {
+                    height: 40px;
+                    width: 30px;
+                }     
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .modal-cont {
+        .modal-box-4 {
+            width: 90%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            .exit-container-4 {
+                width: 90%;
+                padding-bottom: 20px;
+                .exercise-name {
+                    font-size: 14px;
+                }
+            }
+            .series {
+                width: 90%;
+                .modal-info {
+                    font-size: 13px;
+                    height: 30px;
+                    letter-spacing: 0;
+                    .serie, .reps, .weight {
+                        padding-left: 10px;
+                        padding-right: 10px;
+                    }
+                    .serie {
+                        height: 20px;
+                        padding-bottom: 12px;
+                        padding-top: 0;
+                    }
+                }
+                .options {
+                    display: flex;
+                    gap: 5px;
+                    button {
+                        height: 30px;
+                        width: 30px;
+                        svg {
+                            width: 90%;
+                            height: 90%;
+                        }
+                    }     
+                }
+            }
+        }
+    }
+}

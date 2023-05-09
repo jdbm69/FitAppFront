@@ -1,0 +1,145 @@
+.records-box {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    color: $black-color;
+    overflow-y: auto;
+    height: 800px;
+    animation: slideInLeft 1s;
+    .records-title {
+        display: flex;
+        justify-content: space-between;
+        font-size: 25px;
+        border-bottom: 2px solid var(--base-color, $base-color);
+        padding-bottom: 20px;
+        p {
+            padding-top: 20px;
+        }
+        .title {
+            display: flex;
+            flex-direction: column;
+            line-height: 15px;
+            .info {
+                font-size: 14px;
+                color: var(--base-color-darkness, $base-color-darkness);
+                margin: 0;
+                padding: 0;
+            }
+        }
+        form {
+            input {
+                width: 130px;
+                color: var(--base-color, $base-color);
+            }
+            ::-webkit-calendar-picker-indicator {
+                padding: 5px;
+                cursor: pointer;
+            }
+            button {
+                font-size: 15px;
+                padding: 5px 20px;
+                margin-right: 50px;
+                text-transform: capitalize;
+            }
+        }
+    }
+    .records {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        gap: 10px;
+        .routine-item {
+            display: flex;
+            justify-content: center;
+            align-items: baseline;
+            gap: 40px;
+        }
+        .dateof {
+            border-bottom: 2px solid var(--base-color, $base-color);
+            border-left: 1px solid var(--base-color, $base-color);
+            box-shadow: 0px 15px 10px -12px rgba(0,0,0,0.75);
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-top: 5px;
+            padding-bottom: 10px;
+            font-size: 15px;
+            .day {
+                color: var(--base-color, $base-color);
+                margin-right: 20px;
+            }
+        }
+        .name-delete {
+            display: flex;
+            gap: 20px;
+            align-items: end;
+            .item-title {
+                font-size: 15px;
+                width: 420px;
+                height: 50px;
+            }
+            .delete {
+                margin-top: 10px;
+                font-size: 30px;
+                padding: 3px 12px;
+            }
+        }
+    }
+    .msg {
+        padding-left: 10px;
+        color: var(--base-color, $base-color);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .records-box {
+        padding: 20px;
+        .records-title {
+            font-size: 20px;
+            .title {
+                .info {
+                    font-size: 10px;
+                }
+            }
+            form {
+                input {
+                    width: 90px;
+                    font-size: 10px;
+                }
+            }
+        }
+        .records {
+            padding-top: 20px;
+            gap: 20px;
+            .routine-item {
+                gap: 15px;
+            }
+            .dateof {
+                padding-left: 5px;
+                padding-right: 5px;
+                font-size: 10px;
+                .day {
+                    margin-right: 5px;
+                }
+            }
+            .name-delete {
+                height: 50px;
+                gap: 10px;
+                .item-title {
+                    font-size: 10px;
+                    width: 170px;
+                    height: 100%
+                }
+                .delete {
+                    margin-top: 10px;
+                    font-size: 20px;
+                    padding: 3px 12px;
+                    height: 100%;
+                }
+            }
+        }
+        .msg {
+            padding-left: 5px;
+            font-size: 12px;
+        }
+    }
+}
