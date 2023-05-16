@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import {  useCookies } from 'react-cookie';
 import Icon from '../components/Icon';
+import Footer from '../components/Footer';
 
-const Auth = ({ language }) => {
+const Auth = ({ language, setLanguage }) => {
 
   const [cookies, setCookie, removeCookie] = useCookies(null);
   const [error, setError] = useState(null);
@@ -56,6 +57,7 @@ const Auth = ({ language }) => {
   };
 
   return (
+    <>
     <div className='auth-container'>
       <div className="auth-box">
         <div className='title-box'>
@@ -189,6 +191,11 @@ const Auth = ({ language }) => {
         }
       </div>
     </div>
+<Footer 
+  language={language}
+  setLanguage={setLanguage}
+/>
+<>
   );
 }
   
