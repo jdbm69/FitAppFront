@@ -7,7 +7,6 @@ import Progress from './pages/Progress';
 import NavBar from './components/NavBar';
 import { useCookies } from 'react-cookie';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Footer from './components/Footer';
 import { useLocalStorage } from './useLocalStorage';
 import { useState, useEffect } from 'react';
 import NavBarDos from './components/NavBarDos';
