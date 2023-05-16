@@ -96,6 +96,11 @@ const App = () => {
       {!authToken && 
         <Auth 
           language={language}
+          setLanguage={setLanguage}
+          showProfileMenu={showProfileMenu} 
+          setShowProfileMenu={setShowProfileMenu} 
+          setShowNavBarDos={setShowNavBarDos} 
+          shownavBarDos={shownavBarDos}
         />
       }
       {authToken && 
@@ -194,14 +199,6 @@ const App = () => {
           </Routes>
         </BrowserRouter>
       }
-      <Footer 
-        language={language} 
-        setLanguage={setLanguage}
-        showProfileMenu={showProfileMenu} 
-        setShowProfileMenu={setShowProfileMenu} 
-        setShowNavBarDos={setShowNavBarDos} 
-        shownavBarDos={shownavBarDos}
-      />
     </div>
   );
 }
