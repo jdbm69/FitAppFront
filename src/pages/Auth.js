@@ -57,7 +57,6 @@ const Auth = ({ language, setLanguage }) => {
   };
 
   return (
-    <>
     <div className='auth-container'>
       <div className="auth-box">
         <div className='title-box'>
@@ -191,11 +190,6 @@ const Auth = ({ language, setLanguage }) => {
         }
       </div>
     </div>
-    <Footer 
-      language={language}
-      setLanguage={setLanguage}
-    />
-    <>
   );
 }
   
