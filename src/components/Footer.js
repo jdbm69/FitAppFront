@@ -1,6 +1,6 @@
 import Language from "./Language";
 
-const Footer = ({ language, setLanguage, setShowNavBarDos, shownavBarDos, showProfileMenu, setShowProfileMenu }) => {
+const Footer = ({ language, setLanguage }) => {
 
   const closeNavAndProfile = () => {
     if (shownavBarDos) {
