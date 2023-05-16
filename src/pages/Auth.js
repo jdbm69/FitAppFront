@@ -191,11 +191,11 @@ const Auth = ({ language, setLanguage }) => {
         }
       </div>
     </div>
-<Footer 
-  language={language}
-  setLanguage={setLanguage}
-/>
-<>
+    <Footer 
+      language={language}
+      setLanguage={setLanguage}
+    />
+    <>
   );
 }
   
