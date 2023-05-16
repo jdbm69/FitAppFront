@@ -96,10 +96,6 @@ const App = () => {
         <Auth 
           language={language}
           setLanguage={setLanguage}
-          showProfileMenu={showProfileMenu} 
-          setShowProfileMenu={setShowProfileMenu} 
-          setShowNavBarDos={setShowNavBarDos} 
-          shownavBarDos={shownavBarDos}
         />
       }
       {authToken && 
