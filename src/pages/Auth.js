@@ -189,6 +189,10 @@ const Auth = ({ language, setLanguage }) => {
           </p>
         }
       </div>
+      <Footer
+        language={language}
+        setLanguage={setLanguage}
+      />
     </div>
   );
 }
